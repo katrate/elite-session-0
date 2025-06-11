@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InnovaTech - Waitlist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin:0; padding:0;
+      background:#f0f0f0;
+      color:#333;
+    }
+    header {
+      background: #007BFF;
+      color: white;
+      text-align:center;
+      padding: 15px 0;
+    }
+    nav ul {
+      list-style:none;
+      padding:0; margin:10px 0 0 0;
+      text-align:center;
+    }
+    nav ul li {
+      display:inline-block;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 0 15px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+      padding: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    label input[type="radio"] {
+      margin-right: 8px;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    footer {
+      background: #007BFF;
+      color: white;
+      text-align:center;
+      padding: 12px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Join the Waitlist</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="waitlist.html"><strong>Waitlist</strong></a></li>
+        <li><a href="advancements.html">Advancements</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <form id="waitlistForm">
+      <label for="email">Email:</label>
+      <input id="email" type="email" required placeholder="example@domain.com" />
+      
+      <label>
+        <input type="radio" name="updates" value="yes" required />
+        I want to receive updates
+      </label>
+
+      <button type="submit">Join Waitlist</button>
+    </form>
+  </main>
+  <footer>
+    &copy; 2023 InnovaTech. All rights reserved.
+  </footer>
+
+</body>
+</html>
