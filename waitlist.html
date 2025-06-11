@@ -106,11 +106,17 @@
       <button type="submit">Join Waitlist</button>
     </form>
   </main>
-    <script>
+  <footer>
+    &copy; 2023 InnovaTech. All rights reserved.
+  </footer>
+
+  <script>
     document.getElementById('waitlistForm').addEventListener('submit', function(event) {
       event.preventDefault();
+
       const email = document.getElementById('email').value.trim();
       const updates = document.querySelector('input[name="updates"]:checked');
+
       if (email === '') {
         alert('Please enter your email address.');
         return;
@@ -123,13 +129,14 @@
         alert('Please choose if you want to receive updates.');
         return;
       }
+
       alert('Email: ' + email + '\nReceive updates: ' + updates.value);
       this.reset();
     });
 
-  <footer>
-    &copy; 2023 InnovaTech. All rights reserved.
-  </footer>
-
+    function validateEmail(email) {
+      return /\S+@\S+\.\S+/.test(email);
+    }
+  </script>
 </body>
 </html>
