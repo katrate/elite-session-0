@@ -104,16 +104,35 @@
       <button type="submit">Send</button>
     </form>
   </main>
-    <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-
   <footer>
     &copy; 2023 InnovaTech. All rights reserved.
   </footer>
 
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
 
+      if (name === '' || email === '' || message === '') {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        alert('Please enter a valid email.');
+        return;
+      }
+
+      alert('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+      this.reset();
+    });
+
+    function validateEmail(email) {
+      // very simple email validation
+      return /\S+@\S+\.\S+/.test(email);
+    }
+  </script>
 </body>
 </html>
